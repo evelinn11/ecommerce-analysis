@@ -1,0 +1,68 @@
+# Olist Brazil E-Commerce Streamlit Dashboard
+
+## 1. Struktur folder
+
+Letakkan enam file CSV berikut di dalam folder `data/`:
+
+- orders_dataset.csv
+- order_items_dataset.csv
+- products_dataset.csv
+- product_category_name_translation.csv
+- order_reviews_dataset.csv
+- customers_dataset.csv
+
+Struktur akhirnya:
+
+    olist_streamlit_dashboard/
+    ├── app.py
+    ├── requirements.txt
+    └── data/
+        ├── orders_dataset.csv
+        ├── order_items_dataset.csv
+        ├── products_dataset.csv
+        ├── product_category_name_translation.csv
+        ├── order_reviews_dataset.csv
+        └── customers_dataset.csv
+
+Dashboard membutuhkan enam file tersebut. File sellers, payments, dan geolocation tidak digunakan oleh visualisasi dashboard versi ini.
+
+## 2. Instalasi
+
+Disarankan menggunakan virtual environment.
+
+Windows:
+
+    python -m venv .venv
+    .venv\Scripts\activate
+    pip install -r requirements.txt
+
+macOS/Linux:
+
+    python3 -m venv .venv
+    source .venv/bin/activate
+    pip install -r requirements.txt
+
+## 3. Menjalankan dashboard
+
+Jalankan perintah berikut dari folder `olist_streamlit_dashboard`:
+
+    streamlit run app.py
+
+Dashboard akan terbuka di browser, biasanya pada alamat:
+
+    http://localhost:8501
+
+## 4. Isi dashboard
+
+- Penjualan: tren revenue bulanan, kategori teratas, dan tabel ringkasan kategori.
+- Pengiriman & Ulasan: proporsi pengiriman tepat waktu/terlambat dan perbandingan skor ulasan.
+- RFM Pelanggan: jumlah pelanggan per segmen, rata-rata monetary, dan tabel pelanggan.
+
+## 5. Definisi dan batasan
+
+- Periode transaksi: 1 Januari 2017 sampai 31 Agustus 2018.
+- Hanya pesanan dengan status `delivered` yang digunakan.
+- Revenue dihitung dari `price`, tidak termasuk `freight_value`.
+- RFM menggunakan tanggal acuan 1 September 2018.
+- Scoring RFM mengikuti notebook agar hasil segmentasi konsisten. Metode `rank(method="first")` membagi nilai yang sama berdasarkan urutan baris; hal ini merupakan keterbatasan scoring yang perlu dijelaskan dalam laporan.
+- Perbandingan skor ulasan hanya mencakup pesanan yang memiliki ulasan dan tidak membuktikan hubungan sebab-akibat.

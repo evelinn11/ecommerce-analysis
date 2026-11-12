@@ -1,0 +1,11 @@
+# Notebook
+pandas>=2.0
+numpy>=1.24
+matplotlib>=3.7
+seaborn>=0.13
+jupyter>=1.0
+ipykernel>=6.29
+
+# Dashboard
+streamlit>=1.32
+plotly>=5.18
