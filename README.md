@@ -1,4 +1,4 @@
-# Brazilian E-Commerce Data Analysis (Olist)
+# E-Commerce Data Analysis
 
 Proyek ini berisi notebook analisis data dan dashboard interaktif menggunakan Streamlit berdasarkan Brazilian E-Commerce Public Dataset (Olist).
 
