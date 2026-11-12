@@ -45,8 +45,8 @@ Dashboard versi ini membutuhkan enam file CSV: `orders_dataset.csv`, `order_item
 Buka Anaconda Prompt atau terminal, lalu jalankan:
 
 ```bash
-conda create --name olist-analysis python=3.11
-conda activate olist-analysis
+conda create --name ecommerce-analysis python=3.11
+conda activate ecommerce-analysis
 pip install -r requirements.txt
 ```
 
@@ -91,14 +91,14 @@ Pastikan environment sudah aktif, kemudian jalankan:
 jupyter notebook
 ```
 
-Buka file `Proyek_Analisis_Data.ipynb` melalui browser/Jupyter. Jika notebook menggunakan path relatif, pastikan notebook dijalankan dari folder utama proyek dan data berada di folder `data`.
+Buka file `notebook.ipynb` melalui browser/Jupyter. Jika notebook menggunakan path relatif, pastikan notebook dijalankan dari folder utama proyek dan data berada di folder `data`.
 
 ## Menjalankan Dashboard Streamlit
 
 Pastikan environment sudah aktif dan file CSV dashboard sudah tersedia di folder `data/`. Dari folder utama proyek, jalankan:
 
 ```bash
-streamlit run app.py
+streamlit run dashboard/dashboard.py
 ```
 
 Dashboard akan terbuka secara lokal di browser. Alamat default Streamlit adalah:
